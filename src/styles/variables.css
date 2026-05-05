@@ -1,0 +1,51 @@
+/* ============================================================
+   DESIGN TOKENS — edit here to change the whole site
+   ============================================================ */
+
+:root {
+  /* --- Colors --- */
+  --clr-black:        #0a0a0a;
+  --clr-dark:         #111111;
+  --clr-dark-2:       #1a1a1a;
+  --clr-dark-3:       #222222;
+  --clr-border:       #2a2a2a;
+  --clr-white:        #ffffff;
+  --clr-off-white:    #f5f5f3;
+  --clr-muted:        #888888;
+  --clr-subtle:       #444444;
+
+  /* --- Brand Greens (your palette) --- */
+  --clr-green:        #3b796c;   /* primary green */
+  --clr-green-dark:   #336a60;   /* darker green — use sparingly */
+  --clr-green-light:  #4a9488;   /* lighter tint for hovers */
+  --clr-green-dim:    rgba(59, 121, 108, 0.15);   /* transparent fill */
+  --clr-green-glow:   rgba(59, 121, 108, 0.25);   /* glow / shadow */
+
+  /* --- Transparent / Glass --- */
+  --glass-bg:         rgba(255, 255, 255, 0.04);
+  --glass-bg-hover:   rgba(255, 255, 255, 0.08);
+  --glass-border:     rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(59, 121, 108, 0.5);
+
+  /* --- Typography --- */
+  --font-display:     'Syne', sans-serif;
+  --font-body:        'Outfit', sans-serif;
+  --font-mono:        'JetBrains Mono', monospace;
+
+  /* --- Spacing --- */
+  --section-pad:      90px 52px;
+  --section-pad-sm:   60px 24px;
+  --max-w:            1160px;
+  --max-w-narrow:     860px;
+
+  /* --- Radius --- */
+  --radius-sm:        6px;
+  --radius-md:        12px;
+  --radius-lg:        20px;
+  --radius-xl:        28px;
+  --radius-full:      999px;
+
+  /* --- Transitions --- */
+  --transition:       all 0.25s ease;
+  --transition-slow:  all 0.4s ease;
+}

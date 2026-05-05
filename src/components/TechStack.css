@@ -1,0 +1,61 @@
+/* ============================================================
+   TECH STACK SECTION
+   ============================================================ */
+
+.techstack {
+  padding: var(--section-pad);
+  background: linear-gradient(180deg, rgba(59,121,108,0.04) 0%, transparent 100%);
+}
+
+.techstack__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.techstack__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  color: var(--clr-white);
+  letter-spacing: -1.5px;
+  margin-bottom: 44px;
+}
+
+.techstack__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Each pill */
+.techstack__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--glass-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--clr-off-white);
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.techstack__pill:hover {
+  background: var(--clr-green-dim);
+  border-color: rgba(59, 121, 108, 0.5);
+  color: var(--clr-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 121, 108, 0.15);
+}
+
+.techstack__pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-green);
+  flex-shrink: 0;
+}

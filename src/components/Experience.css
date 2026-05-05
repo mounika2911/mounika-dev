@@ -1,0 +1,116 @@
+/* ============================================================
+   EXPERIENCE SECTION
+   ============================================================ */
+
+.experience {
+  padding: var(--section-pad);
+  background: linear-gradient(180deg, transparent 0%, rgba(59,121,108,0.04) 100%);
+}
+
+.experience__inner {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+}
+
+.experience__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  color: var(--clr-white);
+  letter-spacing: -1.5px;
+  margin-bottom: 52px;
+}
+
+/* Timeline */
+.experience__timeline {
+  position: relative;
+  padding-left: 36px;
+}
+
+.experience__line {
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--clr-green) 0%, var(--clr-border) 100%);
+}
+
+/* Each row */
+.experience__item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.experience__item:last-child {
+  margin-bottom: 0;
+}
+
+.experience__dot {
+  position: absolute;
+  left: -42px;
+  top: 26px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--clr-dark);
+  border: 2px solid var(--clr-green);
+  box-shadow: 0 0 0 4px rgba(59, 121, 108, 0.12);
+}
+
+/* Card */
+.experience__card {
+  background: var(--glass-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 26px 30px;
+  transition: var(--transition);
+}
+
+.experience__card:hover {
+  border-color: rgba(59, 121, 108, 0.4);
+  background: var(--glass-bg-hover);
+}
+
+.experience__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.experience__role {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--clr-white);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.experience__company {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--clr-green);
+  letter-spacing: 0.04em;
+}
+
+.experience__period {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--clr-subtle);
+  background: var(--clr-dark-3);
+  border: 1px solid var(--clr-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.experience__desc {
+  font-size: 14px;
+  color: var(--clr-muted);
+  line-height: 1.78;
+  font-weight: 300;
+}

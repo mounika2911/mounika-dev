@@ -1,0 +1,23 @@
+/* ============================================================
+   SECTION LABEL COMPONENT
+   ============================================================ */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-green);
+  margin-bottom: 14px;
+}
+
+.section-label__line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--clr-green);
+  flex-shrink: 0;
+}

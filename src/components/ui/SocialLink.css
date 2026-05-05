@@ -1,0 +1,26 @@
+/* ============================================================
+   SOCIAL LINK COMPONENT
+   ============================================================ */
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--clr-muted);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--clr-green-dim);
+  border-color: var(--clr-green);
+  color: var(--clr-green);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px var(--clr-green-glow);
+}

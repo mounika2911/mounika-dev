@@ -1,0 +1,30 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 52px;
+  border-top: 1px solid var(--clr-border);
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--clr-off-white);
+}
+
+.footer__dot {
+  color: var(--clr-green);
+}
+
+.footer__credit {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--clr-subtle);
+}
