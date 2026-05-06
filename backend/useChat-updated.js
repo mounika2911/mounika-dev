@@ -41,9 +41,12 @@ export const useChat = () => {
       }));
 
       // Call YOUR backend instead of Anthropic directly
-      const response = await fetch(`${BACKEND_URL}/api/chat`, {
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions/api/chat', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
+          'Content-Type': 'application/json' 
+        },
         body: JSON.stringify({
           messages: history,
           system: AI_SYSTEM_PROMPT,
