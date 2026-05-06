@@ -11,7 +11,7 @@ const INITIAL_MESSAGE = {
 };
 
 // Backend URL - change this if your backend runs on a different port
-const BACKEND_URL = 'http://localhost:3001';
+// const BACKEND_URL = 'http://localhost:3001';
 
 export const useChat = () => {
   const [messages, setMessages]   = useState([INITIAL_MESSAGE]);
