@@ -37,8 +37,7 @@ const ChatPanel = ({ onClose }) => {
   }, []);
 
   const handleSuggestion = (text) => {
-    setInput(text);
-    inputRef.current?.focus();
+    sendMessageStream(text);
   };
 
   return (

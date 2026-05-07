@@ -53,8 +53,8 @@ export const useChat = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to get response');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error?.message || errorData.error || 'Failed to get response');
       }
 
       const data = await response.json();
