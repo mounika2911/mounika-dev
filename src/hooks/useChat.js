@@ -45,7 +45,7 @@ export const useChat = () => {
           'Content-Type': 'application/json' 
         },
         body: JSON.stringify({
-          model: 'llama3.1-8b-instant',
+          model: 'llama3-8b-8192',
           messages: [{ role: 'system', content: AI_SYSTEM_PROMPT }, ...history],
           max_tokens: 1000,
           temperature: 0.7,
