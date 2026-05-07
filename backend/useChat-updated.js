@@ -40,16 +40,18 @@ export const useChat = () => {
         content: m.content,
       }));
 
-      // Call YOUR backend instead of Anthropic directly
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions/api/chat', {
+      // Call Groq API directly
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
           'Content-Type': 'application/json' 
         },
         body: JSON.stringify({
-          messages: history,
-          system: AI_SYSTEM_PROMPT,
+          model: 'llama-3.3-70b-versatile',
+          messages: [{ role: 'system', content: AI_SYSTEM_PROMPT }, ...history],
+          max_tokens: 1000,
+          temperature: 0.7,
         }),
       });
 
@@ -59,7 +61,7 @@ export const useChat = () => {
       }
 
       const data = await response.json();
-      const reply = data.content?.map(b => b.text || '').join('') || 'Sorry, something went wrong.';
+      const reply = data.choices?.[0]?.message?.content || 'Sorry, something went wrong.';
       setMessages(prev => [...prev, { role: 'assistant', content: reply }]);
       
     } catch (error) {
@@ -67,7 +69,7 @@ export const useChat = () => {
       let errorMessage = 'Oops, something went wrong. ';
       
       if (error.message.includes('Failed to fetch')) {
-        errorMessage += 'Make sure the backend server is running on port 3001.';
+        errorMessage += 'Check your internet connection.';
       } else {
         errorMessage += error.message || 'Please try again!';
       }
