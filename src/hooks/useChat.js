@@ -22,7 +22,7 @@ export const useChat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const sendMessage = async (text) => {
+  const sendMessageStream = async (text) => {
     const content = (text ?? input).trim();
     if (!content || loading) return;
 
@@ -85,7 +85,7 @@ export const useChat = () => {
     input,
     setInput,
     loading,
-    sendMessage,
+    sendMessageStream,
     messagesEndRef,
     inputRef,
   };
