@@ -11,6 +11,7 @@ const NAV_ITEMS = ['about', 'experience', 'projects', 'stack', 'contact'];
 const Navbar = () => {
   const [scrolled, setScrolled]   = useState(false);
   const [active, setActive]       = useState('about');
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -20,6 +21,7 @@ const Navbar = () => {
 
   const scrollTo = (id) => {
     setActive(id);
+    setMobileOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -30,7 +32,18 @@ const Navbar = () => {
         <span className="navbar__logo-dot">.</span>
       </span>
 
-      <div className="navbar__links">
+      <button
+        className={`navbar__menu-button ${mobileOpen ? 'navbar__menu-button--open' : ''}`}
+        onClick={() => setMobileOpen((prev) => !prev)}
+        aria-label="Toggle navigation menu"
+        type="button"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <div className={`navbar__links ${mobileOpen ? 'navbar__links--open' : ''}`}>
         {NAV_ITEMS.map(item => (
           <button
             key={item}
